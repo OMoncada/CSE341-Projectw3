@@ -1,0 +1,34 @@
+### Get all products
+GET http://localhost:3000/products
+
+### Get one product
+GET http://localhost:3000/products/68324446f9111e7b9d38148e
+
+### Create product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Samsung Portable SSD T7",
+  "description": "High-speed external SSD with USB 3.2, ideal for fast backups and large file transfers.",
+  "price": 129.99,
+  "category": "Storage",
+  "stock": 20,
+  "sku": "SAMSUNGSSD2025"
+}
+
+### Update product
+PUT http://localhost:3000/products/68324446f9111e7b9d38148e
+Content-Type: application/json
+
+{
+    "name": "JBL headphones with microphone",
+    "description": "Headphones with built-in stereo microphone, ideal for video calls and gaming.",
+    "price": 49.9,
+    "category": "Accessories",
+    "stock": 45,
+    "sku": "JBLMIC2024"
+  }
+
+### Delete product
+DELETE http://localhost:3000/products/68314494ea445e4505bef7f8
