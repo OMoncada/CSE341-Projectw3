@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Ruta raíz de prueba
 app.get('/', (req, res) => {
-  res.send('🎉 Bienvenido a la API de Productos');
+  res.send('🎉 Bienvenido a la API de Productos y Marcas');
 });
 
 // Documentación Swagger
@@ -22,11 +22,12 @@ swagger(app);
 
 // Rutas API
 app.use('/products', require('./routes/product'));
+app.use('/brands', require('./routes/brand')); // ⬅️ nueva ruta agregada
 
 // Middleware de manejo de errores
 app.use(errorHandler);
 
-// Conexión a MongoDB con Mongoose (limpia, sin opciones obsoletas)
+// Conexión a MongoDB con Mongoose
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('✅ Conectado a MongoDB con Mongoose');

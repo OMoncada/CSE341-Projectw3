@@ -9,26 +9,60 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "name": "Samsung Portable SSD T7",
-  "description": "High-speed external SSD with USB 3.2, ideal for fast backups and large file transfers.",
-  "price": 129.99,
-  "category": "Storage",
-  "stock": 20,
-  "sku": "SAMSUNGSSD2025"
+  "name": "JBL headphones with microphone",
+    "description": "Headphones with built-in stereo microphone, ideal for video calls and gaming.",
+    "price": 39.9,
+    "category": "Accessories",
+    "stock": 40,
+    "sku": "JBLMIC2024"
 }
 
 ### Update product
-PUT http://localhost:3000/products/68324446f9111e7b9d38148e
+PUT http://localhost:3000/products/68324488f9111e7b9d381491
 Content-Type: application/json
 
 {
-    "name": "JBL headphones with microphone",
-    "description": "Headphones with built-in stereo microphone, ideal for video calls and gaming.",
-    "price": 49.9,
-    "category": "Accessories",
-    "stock": 45,
-    "sku": "JBLMIC2024"
+    "name": "Laptop Lenovo",
+    "description": "Work laptop with 16GB RAM",
+    "stock": 15,
+    "sku": "LENOVO2023"
   }
 
 ### Delete product
-DELETE http://localhost:3000/products/68314494ea445e4505bef7f8
+DELETE http://localhost:3000/products/68324446f9111e7b9d38148e
+
+
+############################# SEGUNDA COLECCION ##################################
+### Get all brands
+GET http://localhost:3000/brands
+
+### Create a new brand
+POST http://localhost:3000/brands
+Content-Type: application/json
+
+{
+  "name": "HP",
+  "country": "United States",
+  "founded": 1939,
+  "description": "American company known for printers, computers, and IT services.",
+  "website": "https://www.hp.com",
+  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HP_logo_2012.svg",
+  "active": true
+}
+
+### Update a brand
+PUT http://localhost:3000/brands/683523ea1736a9b10db1fd96
+Content-Type: application/json
+
+{
+  "name": "HP",
+  "country": "United States",
+  "founded": 1939,
+  "description": "American company known for printers, computers, and IT services.",
+  "website": "https://www.hp.com",
+  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HP_logo_2012.svg",
+  "active": true
+}
+
+### Delete a brand
+DELETE http://localhost:3000/brands/
