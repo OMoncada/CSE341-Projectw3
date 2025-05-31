@@ -7,24 +7,25 @@ GET http://localhost:3000/products/68324446f9111e7b9d38148e
 ### Create product
 POST http://localhost:3000/products
 Content-Type: application/json
-
-{
-  "name": "JBL headphones with microphone",
-    "description": "Headphones with built-in stereo microphone, ideal for video calls and gaming.",
-    "price": 39.9,
-    "category": "Accessories",
-    "stock": 40,
-    "sku": "JBLMIC2024"
-}
+{ 
+"name": "Laptop Lenovo",
+    "description": "Work laptop with 16GB RAM",
+    "price": 799.99,
+    "category": "Electronics",
+    "stock": 15,
+    "sku": "LENOVO2023"
+    
+  }
 
 ### Update product
-PUT http://localhost:3000/products/68324488f9111e7b9d381491
+PUT http://localhost:3000/products/
 Content-Type: application/json
 
 {
     "name": "Laptop Lenovo",
     "description": "Work laptop with 16GB RAM",
-    "stock": 15,
+    "price": 699.99,
+    "category": "Electronics",
     "sku": "LENOVO2023"
   }
 
@@ -51,17 +52,17 @@ Content-Type: application/json
 }
 
 ### Update a brand
-PUT http://localhost:3000/brands/683523ea1736a9b10db1fd96
+PUT http://localhost:3000/brands/683523a51736a9b10db1fd8e
 Content-Type: application/json
 
 {
-  "name": "HP",
-  "country": "United States",
-  "founded": 1939,
-  "description": "American company known for printers, computers, and IT services.",
-  "website": "https://www.hp.com",
-  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HP_logo_2012.svg",
-  "active": true
+  "name": "Samsung",
+    "country": "South Korea",
+    "founded": 1939,
+    "description": "Multinational electronics company known for phones, TVs, and appliances.",
+    "website": "https://www.samsung.com",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    "active": true
 }
 
 ### Delete a brand
